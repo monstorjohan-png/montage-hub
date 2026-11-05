@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor's Paradise - Website Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Video Editor's Paradise</h1>
+        <p>تم بناء موقع شامل لجمع كل الإضافات والأيقونات والممتلكات ثلاثية الأبعاد المجانية للمونتاج!</p>
+        
+        <div style="margin: 20px 0;">
+            <span class="loading"></span>
+            تحميل الملفات...
+        </div>
+        
+        <a href="index.html" class="btn" onclick="loadWebsite()">فتح موقع Video Editor's Paradise</a>
+        
+        <div class="status">
+            ✅ تم إنشاء الموقع بنجاح<br>
+            📁 الملفات: index.html، styles.css، script.js، README.md<br>
+            🎯 جاهز لـ: إضافات DaVinci Resolve، Adobe Premiere Pro، Blender<br>
+            🌐 جاهز للعمل: تصميم فاخر، تفاعلات ناعمة، وضع داكن/فاتح<br>
+            📊 الإحصائيات: 150+ إضافة، 500+ أيقونة متحركة، 1000+ أصل ثلاثي الأبعاد
+        </div>
+    </div>
+    
+    <script>
+        function loadWebsite() {
+            const btn = event.target;
+            btn.innerHTML = '<span class="loading"></span> تحميل الموقع...';
+            btn.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+        
+        // اختصار لوحة المفاتيح
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                window.close();
+            }
+        });
+    </script>
+</body>
+</html>
